@@ -1,0 +1,16 @@
+﻿@page "/LoggerExample"
+@inherits LoggerExampleBase
+
+<PageTitle>Logging</PageTitle>
+
+<h1>Logging</h1>
+
+<div>Click these buttons to see some logging.</div>
+
+<button class="btn btn-info" @onclick="LogDebug">Debug</button>
+<button class="btn btn-secondary" @onclick="LogInformation">Info</button>
+<button class="btn btn-warning" @onclick="LogWarning">Warning</button>
+<button class="btn btn-danger" @onclick="LogError">Error</button>
+<button class="btn btn-dark" @onclick="LogCritical">Critical</button>
+<button class="btn btn-primary" @onclick="LogConsole">Console</button>
+
