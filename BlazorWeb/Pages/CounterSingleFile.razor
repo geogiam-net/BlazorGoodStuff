@@ -4,15 +4,69 @@
 
 <h1>Counter</h1>
 
-<p role="status">Current count: @currentCount</p>
+<p role="status">
+    Current count: 
+    <span class="@BackgroundColor">
+        @currentCount
+    </span>
 
-<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+</p>
+
+<p>
+    <!--
+    "The keypress event is fired when a key that produces a character value is pressed down. Examples of keys that produce a character value are alphabetic, numeric, and punctuation keys."
+    You should use onkeyup or onkeydown for non printable characters. This is a browser thing, and not related to blazor. 
+    -->
+
+    Press + or -<input type="number" @bind-value="@incrementFactor" @onkeypress="OnIncrementFactorKeyPressed" @onkeypress:preventDefault="true" @onclick:stopPropagation="true" />
+</p>
+
+<p>
+    Type a number <input type="number" @bind-value="@incrementFactor" />
+</p>
+
+<p>
+    <!-- The same in a verbose way -->
+    Type a number <input type="number" value="@incrementFactor" @onchange="@((ChangeEventArgs e) => incrementFactor = int.Parse($"{e.Value}"))" />
+</p>
+
+<!-- disabled logic would be better of course as attribute in c sharp -->
+<button class="btn btn-primary" disabled="@(currentCount > 10)" @onclick="IncrementCount">Increment</button>
 
 @code {
+    // one way data binding
     private int currentCount = 0;
+    private int incrementFactor = 1;
 
-    private void IncrementCount()
+    private void IncrementCount(MouseEventArgs e)
     {
-        currentCount++;
+        if (e.CtrlKey)
+        {
+            currentCount -= incrementFactor;
+        }
+        else
+        {
+            currentCount += incrementFactor;
+        }
     }
+
+    // one way attribute binding
+    private string BackgroundColor => (currentCount % 2 == 0) ? "red-background" : "yellow-background";
+
+    private void OnIncrementFactorKeyPressed(KeyboardEventArgs e)
+    {
+        if (e.Key == "+")
+        {
+            incrementFactor += 1;    
+        }
+        else if (e.Key == "-")
+        {
+            incrementFactor -= 1;
+        }
+    }
+
+
+
+
+
 }

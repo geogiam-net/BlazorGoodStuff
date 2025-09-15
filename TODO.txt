@@ -1,0 +1,32 @@
+create test project with all magic spells I know with comments and explanations.
+latest blazor .net core 9
+sso with Microsoft
+spa like react
+microservices
+
+program the following: 
+
+TODO: 
+
+Web Services
+Unit Tests
+Component DLL
+Lazy loading
+Interop JS
+Interop C sharp
+Multicultural language, time format, currency, money
+form validation
+component full life cycle
+Injection services and factory
+component with parameters
+routing, url parameters
+redux store
+parameter cascading
+global reactive variables
+
+docker deployment
+
+unity canvas
+
+SSO
+
