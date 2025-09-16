@@ -9,19 +9,22 @@
 
 <div class="@NavMenuCssClass nav-scrollable" @onclick="ToggleNavMenu">
     <nav class="nav flex-column">
+
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
                 <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
             </NavLink>
         </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="weather">
+                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Weather from Json File
+            </NavLink>
+        </div>
+
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="counter">
                 <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Counter as 1 file
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="weather">
-                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Weather
             </NavLink>
         </div>
 
@@ -36,6 +39,31 @@
                 <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Logger Example
             </NavLink>
         </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="ManualRender">
+                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Async Manual Render
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="OneWayBindingBase">
+                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> One Way Binding
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="TwoWayBindingBase">
+                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Two Way Binding
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="RefComponent">
+                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Reference Component
+            </NavLink>
+        </div>
+
     </nav>
 </div>
 

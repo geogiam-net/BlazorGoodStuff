@@ -24,9 +24,11 @@ redux store
 parameter cascading
 global reactive variables
 
-docker deployment
-
 unity canvas
+Interop unity/c sharp
 
 SSO
 
+docker deployment
+
+OpenShift / Kubernetes

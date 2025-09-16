@@ -1,0 +1,11 @@
+﻿@page "/RefComponent"
+@inherits RefComponentBase
+@using BlazorWeb.Components;
+
+<PageTitle>Reference Component</PageTitle>
+
+<h1>Reference Component</h1>
+
+<ColorAlert @ref="_colorAlert" />
+
+<button @onclick="Dismiss" class="btn btn-success">Dismiss</button>

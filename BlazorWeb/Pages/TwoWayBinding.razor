@@ -1,0 +1,14 @@
+﻿@page "/TwoWayBindingBase"
+@inherits TwoWayBindingBase
+@using BlazorWeb.Components;
+
+<PageTitle>Two Way Binding</PageTitle>
+
+<h1>Two Way Binding</h1>
+
+<!-- when using @bind_ to pass a parameter to a child, we are forced to have a EventCallback _Changed in the child -->
+<DismissibleAlert @bind-Show="@ShowAlert">
+  <strong>Blazor is soo cool!</strong>
+</DismissibleAlert>
+
+
