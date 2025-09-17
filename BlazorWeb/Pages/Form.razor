@@ -4,8 +4,23 @@
 @using BlazorWeb.Forms
 @using BlazorWeb.SampleData;
 
-<PageTitle>A Form</PageTitle>
+<PageTitle>Forms</PageTitle>
 
-<h3>Forms with Blazor Components</h3>
 
-<MemberForm Member="@Member" />
+<MemberForm Member="@Member" /> 
+
+<hr>
+
+<MemberFormEditContext Member="@Member"/>
+
+<hr>
+
+<MemberFormCustom Member="@Member" />
+
+<hr>
+
+<MemberFormFluent Member="@Member" />
+
+<hr>
+
+<MemberFormSubmit Member="@Member" />
