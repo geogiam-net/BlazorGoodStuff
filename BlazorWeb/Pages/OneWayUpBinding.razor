@@ -1,0 +1,18 @@
+﻿@page "/OneWayUpBinding"
+@inherits OneWayUpBindingBase
+@using BlazorWeb.Components;
+
+<PageTitle>One Way Up Binding</PageTitle>
+
+<h1>One Way Up Binding</h1>
+
+@if (ShowAlert)
+{
+    <div class="alert alert-warning fade show" role="alert">
+        Annoying message °_°
+    </div>
+}
+
+<Delay TimeInSeconds="2" Tick="ToggleAlert" />
+
+
