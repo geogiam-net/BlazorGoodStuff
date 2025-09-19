@@ -1,0 +1,20 @@
+﻿@page "/CascadingParam"
+@inherits CascadingParamBase
+@using BlazorWeb.Components;
+@using BlazorWeb.CascadingParameters;
+
+<PageTitle>Cascading Param</PageTitle>
+
+<h1>Cascading Param</h1>
+
+<div>User Name : @UserInfo.UserName</div>
+
+<br/>
+<br />
+
+<GrandMother>
+  <SomeComponent>
+    <GrandChild />
+  </SomeComponent>
+  <GrandChild />
+</GrandMother>

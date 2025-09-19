@@ -1,0 +1,16 @@
+﻿@using BlazorWeb.State;
+
+<div>
+  <h3>GrandChild</h3>
+  <button @onclick="Increment" class="btn btn-success">Inc</button>
+</div>
+
+@code {
+  [CascadingParameter]
+  public CounterData gmData { get; set; } = default!;
+
+  private void Increment()
+  {
+    gmData.Count += 1;
+  }
+}
