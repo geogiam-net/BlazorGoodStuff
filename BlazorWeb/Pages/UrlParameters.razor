@@ -1,0 +1,24 @@
+﻿@using BlazorWeb.Classes;
+
+@attribute [Route(UrlRoutes.UrlParameters)]
+@attribute [Route(UrlRoutes.UrlParametersQueryString)]
+
+@* @page "/UrlParameters" *@
+@* @page "/UrlParameters/{CurrentCount:int?}" *@
+
+@* int? makes it optional *@
+
+
+@inherits UrlParametersBase
+
+<PageTitle>Url Parameters</PageTitle>
+
+<h1>Url Parameters</h1>
+
+<p role="status">Current count: @CurrentCount</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+
+<br />
+
+<button class="btn btn-primary" @onclick="StartFromX">Start from @StartFrom</button>

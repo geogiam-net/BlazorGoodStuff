@@ -10,14 +10,17 @@
 <div class="@NavMenuCssClass nav-scrollable" @onclick="ToggleNavMenu">
     <nav class="nav flex-column">
 
+        @* NavLink applies special css when on active page *@
+
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
                 <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
             </NavLink>
         </div>
 
+        @* NavLinkMatch.Prefix is default *@
         <div class="nav-item px-3">
-            <NavLink class="nav-link" href="weather">
+            <NavLink class="nav-link" href="weather" Match="NavLinkMatch.Prefix">
                 <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Weather from Json File
             </NavLink>
         </div>
@@ -91,6 +94,12 @@
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="CascadingParam">
                 <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Cascading Param
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="UrlParameters">
+                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Url Parameters
             </NavLink>
         </div>
     </nav>

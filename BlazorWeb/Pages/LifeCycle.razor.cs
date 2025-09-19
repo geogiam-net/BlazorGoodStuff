@@ -32,6 +32,7 @@ public class LifeCycleBase : ComponentBase
     {
         Console.WriteLine($"Begin LifeCycle OnInitializedAsync");
         Console.WriteLine($"Counter value = {Counter}");
+        await Task.CompletedTask;
     }
 
     // these 2 methods are called after a parameters bound is changed and the components triggers a new life cycle
