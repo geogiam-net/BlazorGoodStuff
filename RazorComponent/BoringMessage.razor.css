@@ -1,0 +1,7 @@
+﻿.my-component {
+    color: white;
+    font-size: 20px;
+    padding: 1em;
+    margin: 1em 0;
+    background-image: url('background.png');
+}

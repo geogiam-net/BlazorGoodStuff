@@ -15,14 +15,14 @@ Lazy loading
 Interop JS
 Interop C sharp
 Multicultural language, time format, currency, money
-form validation
-component full life cycle
-Injection services and factory
-component with parameters
+(DONE) form validation
+(DONE) component full life cycle
+(DONE) Injection services and factory
+(DONE) component with parameters
 routing, url parameters
 redux store
-parameter cascading
-global reactive variables
+(DONE) parameter cascading
+(DONE) global reactive variables
 
 unity canvas
 Interop unity/c sharp

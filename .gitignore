@@ -11,3 +11,5 @@
 /Services/obj
 /DataObjects/bin/Debug/net9.0
 /DataObjects/obj
+/RazorComponent/bin/Debug/net9.0
+/RazorComponent/obj
