@@ -13,3 +13,5 @@
 /DataObjects/obj
 /RazorComponent/bin/Debug/net9.0
 /RazorComponent/obj
+/LazyLoadingComponent/obj
+/LazyLoadingComponent/bin/Debug/net9.0
