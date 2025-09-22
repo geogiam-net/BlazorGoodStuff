@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
 
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
@@ -14,9 +14,13 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DataObjects\DataObjects.csproj" />
+	<ProjectReference Include="..\LazyLoadingComponent\LazyLoadingComponent.csproj" />
     <ProjectReference Include="..\RazorComponent\RazorComponent.csproj" />
     <ProjectReference Include="..\ServicesInterfaces\ServicesInterfaces.csproj" />
     <ProjectReference Include="..\Services\Services.csproj" />
   </ItemGroup>
 
+    <ItemGroup>
+	    <BlazorWebAssemblyLazyLoad Include="LazyLoadingComponent.wasm" />
+    </ItemGroup>
 </Project>

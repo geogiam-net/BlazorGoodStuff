@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataObjects", "DataObjects\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazorComponent", "RazorComponent\RazorComponent.csproj", "{71F07308-0B8A-46B4-8B0A-D71A477653A1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LazyLoadingComponent", "LazyLoadingComponent\LazyLoadingComponent.csproj", "{EBE1314B-089F-44A7-B3AD-90EBF8FE8F10}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{71F07308-0B8A-46B4-8B0A-D71A477653A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71F07308-0B8A-46B4-8B0A-D71A477653A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71F07308-0B8A-46B4-8B0A-D71A477653A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBE1314B-089F-44A7-B3AD-90EBF8FE8F10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBE1314B-089F-44A7-B3AD-90EBF8FE8F10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBE1314B-089F-44A7-B3AD-90EBF8FE8F10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBE1314B-089F-44A7-B3AD-90EBF8FE8F10}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

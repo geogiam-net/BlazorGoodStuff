@@ -25,8 +25,8 @@ public class LifeCycleBase : ComponentBase
         Console.WriteLine($"Counter value = {Counter}");
         return base.SetParametersAsync(parameters);
         // return base.SetParametersAsync(ParameterView.Empty);
-
     }
+
     // OnInitialized
     protected override async Task OnInitializedAsync()
     {

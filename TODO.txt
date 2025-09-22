@@ -10,8 +10,8 @@ TODO:
 
 Web Services
 Unit Tests
-Component DLL
-Lazy loading
+(DONE) Component DLL
+(DONE) Lazy loading
 Interop JS
 Interop C sharp
 Multicultural language, time format, currency, money
@@ -19,7 +19,7 @@ Multicultural language, time format, currency, money
 (DONE) component full life cycle
 (DONE) Injection services and factory
 (DONE) component with parameters
-routing, url parameters
+(DONE) routing, url parameters
 redux store
 (DONE) parameter cascading
 (DONE) global reactive variables
