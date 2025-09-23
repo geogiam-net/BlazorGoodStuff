@@ -19,11 +19,12 @@ TODO:
 (DONE) routing, url parameters
 (DONE) parameter cascading
 (DONE) global reactive variables
-
-Multicultural language, time format, currency, money
-redux store
+(DONE) XUnit Tests
+(DONE) BUnit Tests
 Web Services
-Unit Tests
+redux store
+Multicultural language, time format, currency, money
+
 
 unity canvas
 Interop unity/c sharp

@@ -1,0 +1,23 @@
+@inherits Bunit.TestContext
+@using BlazorWeb.Pages;
+@using Bunit;
+
+@code {
+  [Fact]
+  public void RenderCorrectlyWithInitialZero()
+  {
+    var cut = Render(@<Contador />);
+        cut.Find("p")
+    .MarkupMatches(@<p role="status">Current count: 0</p>);
+  }
+
+  [Fact]
+  public void IncrementCounterWhenButtonIsClicked()
+  {
+    var cut = Render(@<Contador />);
+    cut.Find(cssSelector: "button")
+       .Click();
+    cut.Find(cssSelector: "p")
+    .MarkupMatches(@<p role="status">Current count: 1</p>);
+  }
+}
