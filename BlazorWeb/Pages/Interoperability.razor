@@ -1,0 +1,25 @@
+﻿@page "/Interoperability"
+@inherits InteroperabilityBase
+
+<PageTitle>Interoperability</PageTitle>
+
+<h1>Interoperability</h1>
+
+<p>Use CSharp to invoke Javascript</p>
+
+<button class="btn btn-primary" @onclick="InvokeJavascript">Click CSharp</button>
+
+<p id="jsResult"></p>
+
+<hr>
+
+<p>Use Javascript to invoke CSharp</p>
+
+@* 
+    It would work is btClick was reachable, it is not since is lives in a module
+    one could try as well: https://learn.microsoft.com/en-us/aspnet/core/blazor/javascript-interoperability/call-dotnet-from-javascript?view=aspnetcore-9.0
+*@
+<button class="btn btn-primary" onclick="btClick">Click Javascript</button>
+
+<p>@csharpResult</p>
+
