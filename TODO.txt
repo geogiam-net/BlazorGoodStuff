@@ -8,21 +8,22 @@ program the following:
 
 TODO: 
 
-Web Services
-Unit Tests
 (DONE) Component DLL
 (DONE) Lazy loading
-Interop JS
-Interop C sharp
-Multicultural language, time format, currency, money
+(DONE) Interop JS
+(DONE) Interop C sharp
 (DONE) form validation
 (DONE) component full life cycle
 (DONE) Injection services and factory
 (DONE) component with parameters
 (DONE) routing, url parameters
-redux store
 (DONE) parameter cascading
 (DONE) global reactive variables
+
+Multicultural language, time format, currency, money
+redux store
+Web Services
+Unit Tests
 
 unity canvas
 Interop unity/c sharp

@@ -15,3 +15,6 @@
 /RazorComponent/obj
 /LazyLoadingComponent/obj
 /LazyLoadingComponent/bin/Debug/net9.0
+/ServicesUnitTests/bin/Debug/net9.0
+/ServicesUnitTests/obj/Debug/net9.0
+/ServicesUnitTests/obj

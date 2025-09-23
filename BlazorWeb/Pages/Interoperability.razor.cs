@@ -4,6 +4,7 @@ using System.Diagnostics.Metrics;
 
 namespace BlazorWeb.Pages;
 
+// in a real project, all interop muss be in a service to separate both logic layers
 public class InteroperabilityBase : ComponentBase
 {
     [Inject]
