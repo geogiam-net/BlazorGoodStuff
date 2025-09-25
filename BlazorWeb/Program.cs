@@ -21,7 +21,6 @@ builder.Services.AddKeyedScoped(
         BaseAddress = new Uri("http://localhost:5184/")
     });
 
-
 // Add DI ------------------------------------------------------------------------------------------------------
 builder.Services.AddSingleton<IProductService, ProductService>();
 //HardCodedProductsService hardCodedProductsService = new();

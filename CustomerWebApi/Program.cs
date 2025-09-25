@@ -2,6 +2,18 @@ using Microsoft.AspNetCore.HttpLogging; // To use HttpLoggingFields.
 
 var builder = WebApplication.CreateBuilder(args);
 
+// order is important !
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(builder =>
+    {
+        // builder.WithOrigins("http://domain.com","http://domain2.com")
+        builder.AllowAnyOrigin()
+               .AllowAnyMethod()
+               .AllowAnyHeader();
+    });
+});
+
 builder.Services.AddControllers();
 
 // when not using controllers 
@@ -19,9 +31,12 @@ builder.Services.AddHttpLogging(options =>
 });
 
 
+
 // --------------------------------------------------------------------------------------------------------------
 WebApplication app = builder.Build();
 // --------------------------------------------------------------------------------------------------------------
+
+app.UseCors(); // order is important !
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -49,7 +64,6 @@ app.MapGet("/weatherforecast/{days:int?}",
 
 // an alternative way to map endpoints
 app.MapCustomers();
-
 
 // --------------------------------------------------------------------------------------------------------------
 app.Run();
