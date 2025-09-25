@@ -1,0 +1,42 @@
+﻿@page "/CallCustomerWebApi"
+@inherits CallCustomerWebApiBase
+@using DataObjects;
+
+<PageTitle>Call CustomerWebApi</PageTitle>
+
+<h1>Call CustomerWebApi</h1>
+
+@if (customers is null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Company Name</th>
+                <th>Address</th>
+                <th>Phone</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Customer c in customers)
+            {
+                <tr>
+                    <td>@c.CustomerId</td>
+                    <td>@c.CompanyName</td>
+                    <td>
+                        @c.Address<br />
+                        @c.City<br />
+                        @c.PostalCode<br />
+                        @c.Country
+                    </td>
+                    <td>@c.Phone</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

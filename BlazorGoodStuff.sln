@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicesUnitTests", "Servic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWebUnitTests", "BlayorWebUnitTests\BlazorWebUnitTests.csproj", "{CB52A015-7A6D-D83B-42AF-CC2087A4DE4C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerWebApi", "CustomerWebApi\CustomerWebApi.csproj", "{2EB83C4D-0750-42A3-9760-5F37F94C5D98}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{CB52A015-7A6D-D83B-42AF-CC2087A4DE4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CB52A015-7A6D-D83B-42AF-CC2087A4DE4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CB52A015-7A6D-D83B-42AF-CC2087A4DE4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EB83C4D-0750-42A3-9760-5F37F94C5D98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EB83C4D-0750-42A3-9760-5F37F94C5D98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EB83C4D-0750-42A3-9760-5F37F94C5D98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EB83C4D-0750-42A3-9760-5F37F94C5D98}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

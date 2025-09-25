@@ -21,3 +21,5 @@
 /BlayorWebUnitTests/bin/Debug/net9.0
 /BlayorWebUnitTests/obj/Debug/net9.0
 /BlayorWebUnitTests/obj
+/CustomerWebApi/obj
+/CustomerWebApi/bin/Debug/net9.0

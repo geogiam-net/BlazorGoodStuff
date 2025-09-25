@@ -1,0 +1,43 @@
+// https://learn.microsoft.com/en-us/aspnet/core/test/http-files?view=aspnetcore-9.0
+
+@CustomerWebApi_HostAddress = http://localhost:5184
+
+GET {{CustomerWebApi_HostAddress}}/hello
+Accept: application/json
+
+###
+
+GET {{CustomerWebApi_HostAddress}}/weatherforecast/3
+Accept: application/json
+
+###
+
+GET {{CustomerWebApi_HostAddress}}/api/customer/RetrieveAllAsync
+Accept: application/json
+
+###
+
+PUT {{CustomerWebApi_HostAddress}}/api/customer/UpdateAsync
+Content-Type: application/json
+Accept: application/json
+
+{
+    "CustomerId": "qwert",
+    "CompanyName": "HiQ",
+    "contactName": "George",
+    "contactTitle": null,
+    "address": null,
+    "city": "Munich",
+    "region": null,
+    "postalCode": null,
+    "country": null,
+    "phone": null,
+    "fax": null
+}
+
+###
+
+DELETE {{CustomerWebApi_HostAddress}}/api/customer/DeleteAsync/44rbz
+Accept: application/json
+
+###

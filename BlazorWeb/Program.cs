@@ -1,6 +1,5 @@
 using BlazorWeb;
 using BlazorWeb.State;
-using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Services;
@@ -10,7 +9,18 @@ var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
-builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+builder.Services.AddKeyedScoped(
+    "BlazorWeb",
+    (sp, key) => new HttpClient { 
+        BaseAddress = new Uri(builder.HostEnvironment.BaseAddress)
+    });
+
+builder.Services.AddKeyedScoped(
+    "CustomerWebApi",
+    (sp, key) => new HttpClient { 
+        BaseAddress = new Uri("http://localhost:5184/")
+    });
+
 
 // Add DI ------------------------------------------------------------------------------------------------------
 builder.Services.AddSingleton<IProductService, ProductService>();
@@ -39,8 +49,6 @@ builder.Services.AddCascadingValue("Fixed", _ =>
 */
 
 
-
-
 // --------------------------------------------------------------------------------------------------------------
 WebAssemblyHost host = builder.Build();
 // --------------------------------------------------------------------------------------------------------------
@@ -50,9 +58,6 @@ ILogger<Program> logger = host.Services
     .CreateLogger<Program>();
 
 logger.LogInformation("This is can be read in the output from VS and in a default temp file that is created");
-
-
-
 
 
 // --------------------------------------------------------------------------------------------------------------
