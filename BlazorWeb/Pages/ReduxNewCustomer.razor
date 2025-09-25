@@ -1,0 +1,65 @@
+﻿@page "/ReduxNewCustomer"
+@inherits ReduxNewCustomerBase
+@using DataObjects;
+
+<PageTitle>Redux for New Customer</PageTitle>
+
+<h1>Redux for New Customer</h1>
+
+@if (@AppStore.IsSubmitting)
+{
+    <p><em>Submitting...</em></p>
+}
+else
+{
+    <EditForm EditContext="@editContext" FormName="customer-form1" OnValidSubmit="Submit">
+
+        <div class="form-group row mb-1">
+            <label class="col-sm-3 col-form-label" for="Name">CompanyName:</label>
+            <div class="col-sm-9">
+                <InputText class="form-control" @bind-value="customer.CompanyName" />
+            </div>
+        </div>
+
+        <div class="form-group row mb-1">
+            <label class="col-sm-3 col-form-label" for="Name">Address:</label>
+            <div class="col-sm-9">
+                <InputText class="form-control" @bind-value="customer.Address" />
+            </div>
+        </div>
+
+        <div class="form-group row mb-1">
+            <label class="col-sm-3 col-form-label" for="Name">City:</label>
+            <div class="col-sm-9">
+                <InputText class="form-control" @bind-value="customer.City" />
+            </div>
+        </div>
+
+        <div class="form-group row mb-1">
+            <label class="col-sm-3 col-form-label" for="Name">PostalCode:</label>
+            <div class="col-sm-9">
+                <InputText class="form-control" @bind-value="customer.PostalCode" />
+            </div>
+        </div>
+
+        <div class="form-group row mb-1">
+            <label class="col-sm-3 col-form-label" for="Name">Country:</label>
+            <div class="col-sm-9">
+                <InputText class="form-control" @bind-value="customer.Country" />
+            </div>
+        </div>
+
+        <div class="form-group row mb-1">
+            <label class="col-sm-3 col-form-label" for="Name">Phone:</label>
+            <div class="col-sm-9">
+                <InputText class="form-control" @bind-value="customer.Phone" />
+            </div>
+        </div>
+
+        <div class="form-group mb-0">
+            <button type="submit" class="btn btn-primary">
+                Simulate Submit
+            </button>
+        </div>
+    </EditForm>
+}

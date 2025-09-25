@@ -13,7 +13,7 @@
   <div class="form-group row mb-1">
     <label class="col-sm-3 col-form-label" for="Name">Name:</label>
     <div class="col-sm-9">
-      <InputText class="form-control" @bind-Value="Member.Name" />
+      <InputText class="form-control" @bind-value="Member.Name" />
       <ValidationMessage For="@(() => Member.Name)" />
     </div>
   </div>
@@ -21,7 +21,7 @@
   <div class="form-group row mb-1">
     <label class="col-sm-3 col-form-label" for="Email">Email:</label>
     <div class="col-sm-9">
-      <InputText type="email" class="form-control" formnovalidate @bind-Value="Member.Email" />
+      <InputText type="email" class="form-control" formnovalidate @bind-value="Member.Email" />
       <ValidationMessage For="@(() => Member.Email)" />
     </div>
   </div>
@@ -29,7 +29,7 @@
   <div class="form-group row mb-1">
     <label class="col-sm-3 col-form-label" for="Password">Password:</label>
     <div class="col-sm-9">
-      <InputText type="password" class="form-control" @bind-Value="Member.Password" />
+      <InputText type="password" class="form-control" @bind-value="Member.Password" />
       <ValidationMessage For="@(() => Member.Password)" />
     </div>
   </div>
@@ -37,7 +37,7 @@
   <div class="form-group row mb-1">
     <label class="col-sm-3 col-form-label" for="Message">Message:</label>
     <div class="col-sm-9">
-      <InputTextArea class="form-control" @bind-Value="Member.Message" />
+      <InputTextArea class="form-control" @bind-value="Member.Message" />
       <ValidationMessage For="@(() => Member.Message)" />
     </div>
   </div>
@@ -45,7 +45,7 @@
   <div class="form-group row mb-1">
     <label class="col-sm-3 col-form-label" for="Country">Country:</label>
     <div class="col-sm-9">
-      <InputSelect class="form-control" @bind-Value="Member.Country">
+      <InputSelect class="form-control" @bind-value="Member.Country">
         @foreach (var country in Countries.All)
         {
           <option value="@country.Key">@country.Value</option>
@@ -57,14 +57,14 @@
   <div class="form-group row mb-1">
     <label class="col-sm-3 col-form-label" for="Subscriber">Subscribe:</label>
     <div class="col-sm-9">
-      <InputCheckbox class="form-check-input" @bind-Value="Member.Subscriber" />
+      <InputCheckbox class="form-check-input" @bind-value="Member.Subscriber" />
     </div>
   </div>
 
   <div class="form-group row mb-1">
     <label class="col-sm-3 col-form-label" for="Gender">Gender:</label>
     <div class="col-sm-9">
-      <InputRadioGroup Name="Gender" @bind-Value="Member.Gender">
+      <InputRadioGroup Name="Gender" @bind-value="Member.Gender">
         @foreach (Gender gender in Enum.GetValues<Gender>())
         {
           <InputRadio class="form-check-input" Name="Gender" Value="@gender" />

@@ -1,13 +1,25 @@
 using BlazorWeb;
 using BlazorWeb.State;
+using Fluxor;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Services;
 using ServicesInterfaces;
+using Fluxor.Blazor.Web.ReduxDevTools;
+using BlazorWeb.Redux.Stores;
+
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
+
+builder.Services.AddFluxor(options =>
+{
+    options.ScanAssemblies(typeof(AppStore).Assembly);
+#if DEBUG
+    options.UseReduxDevTools();
+#endif
+});
 
 builder.Services.AddKeyedScoped(
     "BlazorWeb",

@@ -21,16 +21,10 @@ TODO:
 (DONE) global reactive variables
 (DONE) XUnit Tests
 (DONE) BUnit Tests
-Web Services
+(DONE) Web Services
 redux store
 Multicultural language, time format, currency, money
 
-
-unity canvas
-Interop unity/c sharp
-
-SSO
-
-docker deployment
-
-OpenShift / Kubernetes
+Interop unity against javascript / csharp / webservice
+Single Sign on
+OpenShift / Kubernetes deployment

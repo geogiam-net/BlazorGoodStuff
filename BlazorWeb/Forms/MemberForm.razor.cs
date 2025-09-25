@@ -8,10 +8,10 @@ public class MemberFormBase : ComponentBase
 {
     [Parameter]
     [EditorRequired]
-    public required Member Member { get; set; }
+    public required Member member { get; set; }
 
     public void Submit()
     {
-        Console.WriteLine(Member.ToJson());
+        Console.WriteLine(member.ToJson());
     }
 }
