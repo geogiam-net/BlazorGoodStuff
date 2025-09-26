@@ -1,7 +1,8 @@
 ﻿using BlazorWeb.Redux.Stores;
 using Fluxor;
 
-namespace BlazorApp.WithRedux.Features;
+namespace BlazorWeb.Redux.Features;
+
 public class AppFeature : Feature<AppStore>
 {
   public override string GetName()

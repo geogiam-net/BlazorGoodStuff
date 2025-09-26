@@ -1,7 +1,8 @@
 ﻿using BlazorWeb.Redux.Stores;
+using BlazorWeb.Redux.Actions;
 using Fluxor;
 
-namespace BlazorApp.WithRedux.Components.Pages.Counter;
+namespace BlazorWeb.Redux.Reducers;
 
 public static class NewCustomerFormReducer
 {
@@ -12,63 +13,70 @@ public static class NewCustomerFormReducer
     [ReducerMethod]
     public static AppStore ReduceSetCompanyNameAction(AppStore state, SetCompanyNameAction action)
     {
-        if (state.NewCustomer is null)
+        return state with
         {
-            return state;
-        }
-        return state with { NewCustomer = state.NewCustomer with { CompanyName = action.companyName } };
+            NewCustomer = (state.NewCustomer is null)
+            ? new Records.CustomerRecord() { CompanyName = action.companyName }
+            : state.NewCustomer with { CompanyName = action.companyName }
+        };
     }
 
     [ReducerMethod]
     public static AppStore ReduceSetAddressAction(AppStore state, SetAddressAction action)
     {
-        if (state.NewCustomer is null)
+        return state with
         {
-            return state;
-        }
-        return state with { NewCustomer = state.NewCustomer with { Address = action.address } };
+            NewCustomer = (state.NewCustomer is null)
+            ? new Records.CustomerRecord() { Address = action.address }
+            : state.NewCustomer with { Address = action.address }
+        };
     }
 
     [ReducerMethod]
     public static AppStore ReduceSetCityAction(AppStore state, SetCityAction action)
     {
-        if (state.NewCustomer is null)
+        return state with
         {
-            return state;
-        }
-        return state with { NewCustomer = state.NewCustomer with { City = action.city } };
+            NewCustomer = (state.NewCustomer is null)
+            ? new Records.CustomerRecord() { City = action.city }
+            : state.NewCustomer with { City = action.city }
+        };
     }
 
     [ReducerMethod]
     public static AppStore ReduceSetPostalCodeAction(AppStore state, SetPostalCodeAction action)
     {
-        if (state.NewCustomer is null)
+        return state with
         {
-            return state;
-        }
-        return state with { NewCustomer = state.NewCustomer with { PostalCode = action.postalCode } };
+            NewCustomer = (state.NewCustomer is null)
+            ? new Records.CustomerRecord() { PostalCode = action.postalCode }
+            : state.NewCustomer with { PostalCode = action.postalCode }
+        };
     }
 
     [ReducerMethod]
     public static AppStore ReduceSetCountryAction(AppStore state, SetCountryAction action)
     {
-        if (state.NewCustomer is null)
+        return state with
         {
-            return state;
-        }
-        return state with { NewCustomer = state.NewCustomer with { Country = action.country } };
+            NewCustomer = (state.NewCustomer is null)
+            ? new Records.CustomerRecord() { Country = action.country }
+            : state.NewCustomer with { Country = action.country }
+        };
     }
 
     [ReducerMethod]
     public static AppStore ReduceSetPhoneAction(AppStore state, SetPhoneAction action)
     {
-        if (state.NewCustomer is null) {
-            return state;
-        }
-        return state with { NewCustomer = state.NewCustomer with { Phone = action.phone } };
+        return state with
+        {
+            NewCustomer = (state.NewCustomer is null)
+            ? new Records.CustomerRecord() { Phone = action.phone }
+            : state.NewCustomer with { Phone = action.phone }
+        };
     }
 
     [ReducerMethod]
-    public static AppStore ReduceResetNewCustonerAction(AppStore state, ResetNewCustonerAction action)
-        => state with { NewCustomer = null };
+    public static AppStore ReduceResetNewCustonerAction(AppStore state, ResetNewCustonerForm action)
+        => state with { NewCustomer = null, IsSubmitting = false };
 }

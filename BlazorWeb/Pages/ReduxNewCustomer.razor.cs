@@ -1,6 +1,6 @@
-﻿using BlazorApp.WithRedux.Components.Pages.Counter;
-using BlazorWeb.Classes;
+﻿using BlazorWeb.Classes;
 using BlazorWeb.Redux.Stores;
+using BlazorWeb.Redux.Actions;
 using DataObjects;
 using Fluxor;
 using Microsoft.AspNetCore.Components;
@@ -93,7 +93,18 @@ public class ReduxNewCustomerBase : Fluxor.Blazor.Web.Components.FluxorComponent
         timer = new(
             callback:  (_) => {    
                 Console.WriteLine(customer.ToJson());
-                dispatcher.Dispatch(new SetSubmittingAction(false));
+
+                customer.CompanyName = string.Empty;
+                customer.Address = string.Empty;
+                customer.City = string.Empty;
+                customer.PostalCode = string.Empty;
+                customer.Country = string.Empty;
+                customer.Phone = string.Empty;
+
+                editContext?.MarkAsUnmodified();
+
+                dispatcher.Dispatch(new ResetNewCustonerForm());
+
                 this.StateHasChanged();
             },
             state: null,

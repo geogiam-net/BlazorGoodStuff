@@ -1,4 +1,4 @@
-﻿namespace BlazorApp.WithRedux.Components.Pages.Counter;
+﻿namespace BlazorWeb.Redux.Actions;
 
 public record SetSubmittingAction(bool isSubmitting);
 
@@ -14,4 +14,4 @@ public record SetCountryAction(string country);
 
 public record SetPhoneAction(string phone);
 
-public record ResetNewCustonerAction();
+public record ResetNewCustonerForm();
