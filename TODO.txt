@@ -22,9 +22,11 @@ TODO:
 (DONE) XUnit Tests
 (DONE) BUnit Tests
 (DONE) Web Services
-redux store
+(DONE) fluxor store
 Multicultural language, time format, currency, money
+(DONE) Single Sign on
+(DONE) Interop unity against javascript / csharp / webservice
 
-Interop unity against javascript / csharp / webservice
-Single Sign on
 OpenShift / Kubernetes deployment
+
+
